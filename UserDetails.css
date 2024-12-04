@@ -1,0 +1,12 @@
+.flex_container_custom {
+  font-weight: bold;
+}
+.modal_footer_cancel_button {
+  color: black;
+  font-weight: 400;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid rgb(221, 219, 219);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
