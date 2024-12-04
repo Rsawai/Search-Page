@@ -1,0 +1,122 @@
+.mainPage {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, white 40%, skyblue 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+.mainPage::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-image: radial-gradient(gray 2px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Search input container */
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+/* Search icon styling */
+.search-icon {
+  position: absolute;
+  left: 7rem;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+}
+
+/* Search input field styling */
+.searchInput {
+  padding: 12px 12px 12px 40px;
+  border-radius: 8px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 50rem;
+  margin-left: 6rem;
+  box-sizing: border-box;
+}
+
+.searchInput::placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+/* Hide logo when search term is present */
+.girmanLogo-img {
+  width: 35rem;
+  margin-right: 2rem;
+  transition: opacity 0.3s ease;
+}
+
+.hide-logo {
+  opacity: 0;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .mainPage {
+    height: 100vh;
+  }
+
+  .girmanLogo-img {
+    width: 20rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .hide-logo {
+    opacity: 0;
+  }
+
+  .search-container {
+    flex-direction: column;
+    padding: 10px;
+    width: 90%;
+  }
+
+  .searchInput {
+    width: 27rem;
+    padding: 12px 12px 12px 40px;
+    font-size: 1rem;
+  }
+
+  .search-icon {
+    left: 3rem;
+    top: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .girmanLogo-img {
+    width: 15rem;
+    margin-bottom: 0rem;
+  }
+
+  .searchInput {
+    padding: 10px 10px 10px 35px;
+    width: 17rem;
+    margin-left: 8.5rem;
+  }
+
+  .search-icon {
+    top: 1.4rem;
+    left: 4.2rem;
+    width: 18px;
+    height: 18px;
+  }
+}
